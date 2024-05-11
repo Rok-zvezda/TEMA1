@@ -1,0 +1,77 @@
+@media(max-width: 500px){
+  .adaptive{
+    flex-direction: column;
+  }
+  .margadaptive{
+    margin-bottom: 30px;
+  }
+
+.about-marg{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ssilka{
+  display:block;
+  width:90%;
+}
+  
+.shapka{
+  max-width: 100%;
+  max-height: 70px;
+  margin-top: 30px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 10px;
+}
+.box {
+  max-width: 100%;
+  max-height: 800px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+
+}
+.textadaptive-big{
+  font-size: 4vw;
+}
+.textadaptive-medium{
+  font-size: 3vw;
+}
+.textadaptive-small{
+  font-size: 2vw;
+}
+
+
+.impact{
+  font-family: 'Impact', 'Fantasy';
+  font-size: 3.5vw;
+}
+.navknopki{
+  font-size: 2vw;
+}
+
+.stroka {
+  display: flex;
+  max-height:600px;
+  max-width:auto;
+}
+  
+.block {
+  margin-right: 30px;
+}
+
+.img-container {
+  object-fit: contain;
+  max-width: 100%;
+  max-height:400px;
+}
+
+.img-center{
+  text-align: center
+}

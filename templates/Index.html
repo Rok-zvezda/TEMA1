@@ -1,0 +1,105 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<h2 class="textadaptive-medium">Товары, которые вы можете заказать из любого уголка России:</h2>
+<div class = "adaptive d-flex w-100">
+  <div class="card block margadaptive">
+    <div class="img-center shadow">
+      <img class="img-container " src="static\Snegohod2 (1).png">
+    </div>
+    <div class="card-body">
+      <p class="card-title textadaptive-medium">Подъёмник для снегохода</h3>
+      <h4 class="textadaptive-medium">Цена: 3500 руб.</h4>
+      <p class="textadaptive-medium">
+        Лёгкий и надёжный, сварен с душой под любые ваши нужды
+      </p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        Заказать
+      </button>
+    </div>
+  </div>
+  <div class="card block">
+    <img class="object-fit-contain img-container shadow" src="static\motopodemnik2.png">
+    <div class="card-body">
+      <p class="card-title textadaptive-medium">Мотоподъёмник</p>
+      <h4 class="textadaptive-medium">Цена: 3500 руб.</h4>
+      <p class="textadaptive-medium">
+        Будет долго служить опорой Вашему железному коню
+      </p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+        Заказать
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Оформление заказа</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form method="POST">
+            <div class="modal-body">
+              Внимание! Мы работаем по 100% предоплате.<br>
+              Заполните эти поля, чтобы мы с вами связались и договорились об оплате и доставке:
+                <br><input type = "hidden" name = "tovarcode" id = "tovarcode" value="1"><br>
+                <input type = "string" name = "zakazchik" id = "zakazchik" class = "form-control" placeholder = "Как к вам обращаться?"><br>
+                <input type = "integer" name = "phonenumber" id = "phonenumber" class = "form-control" placeholder = "Введите свой номер телефона для связи"><br>
+                <p>Выберете способ доставки: <select class="btn btn-secondary dropdown-toggle" name="dostavka" id="dostavka">
+                  <option selected value="Яндекс">Яндекс Маркет</option>
+                  <option value="ДПД">DPD</option>
+                  <option value="СДЭК">СДЭК</option>
+                  <option value="Боксберри">Боксберри</option>
+                  <option value="ТК">ТК (по запросу)</option>
+                </select>
+
+              </div>
+            <div class="modal-footer">
+              <input type ="submit" class = "btn btn-success" value = "Оформить заказ">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Оформление заказа</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form method="POST">
+            <div class="modal-body">
+              Внимание! Мы работаем по 100% предоплате.<br>
+              Заполните эти поля, чтобы мы с вами связались и договорились об оплате и доставке:
+                <br><input type = "hidden" name = "tovarcode" id = "tovarcode" value="2"><br>
+                <input type = "string" name = "zakazchik" id = "zakazchik" class = "form-control" placeholder = "Как к вам обращаться?"><br>
+                <input type = "integer" name = "phonenumber" id = "phonenumber" class = "form-control" placeholder = "Введите свой номер телефона для связи"><br>
+                <p>Выберете способ доставки: <select class="btn btn-secondary dropdown-toggle" name="dostavka" id="dostavka">
+                  <option selected value="Яндекс">Яндекс Маркет</option>
+                  <option value="ДПД">DPD</option>
+                  <option value="СДЭК">СДЭК</option>
+                  <option value="Боксберри">Боксберри</option>
+                  <option value="ТК">ТК (по запросу)</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+              <input type ="submit" class = "btn btn-success" value = "Оформить заказ">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+{% endblock %}
